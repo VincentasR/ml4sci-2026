@@ -1,0 +1,26 @@
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                              aten::cat         0.59%     573.169us         1.07%       1.045ms       6.528us      30.862ms        35.38%      30.862ms     192.886us           160  
+void at::native::(anonymous namespace)::CatArrayBatc...         0.00%       0.000us         0.00%       0.000us       0.000us      30.763ms        35.27%      30.763ms     307.625us           100  
+                                            aten::addmm         2.36%       2.306ms         4.34%       4.229ms      13.214us      23.491ms        26.93%      23.491ms      73.409us           320  
+void magma_sgemmEx_kernel<float, float, float, true,...         0.00%       0.000us         0.00%       0.000us       0.000us      22.681ms        26.00%      22.681ms     141.756us           160  
+                                             aten::silu         0.59%     574.345us         1.17%       1.144ms       5.720us      11.935ms        13.68%      11.935ms      59.675us           200  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      11.935ms        13.68%      11.935ms      59.675us           200  
+                                            aten::index         0.99%     968.506us         1.78%       1.735ms       8.675us      10.227ms        11.72%      10.227ms      51.133us           200  
+void at::native::vectorized_gather_kernel<16, long>(...         0.00%       0.000us         0.00%       0.000us       0.000us       9.683ms        11.10%       9.683ms      80.689us           120  
+                                     aten::scatter_add_         0.34%     327.598us         0.61%     591.313us       7.391us       8.278ms         9.49%       8.278ms     103.480us            80  
+void at::native::tma_scatter_add_kernel<float, long>...         0.00%       0.000us         0.00%       0.000us       0.000us       8.170ms         9.37%       8.170ms     136.167us            60  
+void cutlass::Kernel2<cutlass_80_simt_sgemm_128x32_8...         0.00%       0.000us         0.00%       0.000us       0.000us     688.264us         0.79%     688.264us       5.736us           120  
+void at::native::index_elementwise_kernel<128, 4, at...         0.00%       0.000us         0.00%       0.000us       0.000us     543.877us         0.62%     543.877us       6.798us            80  
+                                         aten::bincount         0.44%     431.276us        84.26%      82.185ms       1.027ms     437.905us         0.50%     936.320us      11.704us            80  
+void at::cuda::kernelHistogram1D<long, long, long, 1...         0.00%       0.000us         0.00%       0.000us       0.000us     437.905us         0.50%     437.905us       5.474us            80  
+                                aten::native_layer_norm         0.40%     392.808us         1.09%       1.065ms      13.313us     430.706us         0.49%     430.706us       5.384us            80  
+void at::native::(anonymous namespace)::vectorized_l...         0.00%       0.000us         0.00%       0.000us       0.000us     430.706us         0.49%     430.706us       5.384us            80  
+                                          aten::aminmax         0.64%     620.216us         1.15%       1.126ms      14.070us     351.334us         0.40%     351.334us       4.392us            80  
+void at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us     330.632us         0.38%     330.632us       4.133us            80  
+                                              aten::div         0.37%     356.983us         0.66%     645.240us       6.452us     277.323us         0.32%     277.323us       2.773us           100  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us     254.246us         0.29%     254.246us       1.816us           140  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 97.538ms
+Self CUDA time total: 87.231ms
