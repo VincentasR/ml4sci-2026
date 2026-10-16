@@ -1,2 +1,5 @@
 *.pkl
 *.ckpt
+*.gz
+*-ubyte*
+*.mat
